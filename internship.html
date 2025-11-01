@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Internship Work | My Portfolio</title>
+  <link rel="stylesheet" href="PortfolioStylesheet.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a class="logo" href="index.html">About Steph</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="artwork.html">Artwork</a></li>
+      <li><a href="internship.html">Internship</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER (optional parallax header) -->
+  <header class="sub-hero parallax" style="background-image: url('Pictures/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');">
+    <div class="overlay">
+      <h1>Internship</h1>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <section class="page-content">
+    <h2>My Human Resources Internship</h2>
+    <p>
+      Here's a small selection of items I designed in my internship. (Some items have been redacted for privacy reasons.)
+    </p>
+
+  <!--Row 1-->
+  <div class="carousel-row">
+
+    <!-- Carousel 1 -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="InternshipWork/ADPT1.png" alt="Adopt a Trail Posters">
+        <img src="InternshipWork/ADPT2.png" alt="Adopt a Trail Posters">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <!-- Carousel 2 -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="InternshipWork/KudosFD1.png" alt="Kudos: Front Desk Edition">
+        <img src="InternshipWork/KudosFD2.png" alt="Kudos: Front Desk Edition">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <!-- Carousel 3 -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="InternshipWork/PKudos1.png" alt="Pastry Appreciation Instagram Story 1">
+        <img src="InternshipWork/PKudos2.png" alt="Pastry Appreciation Instagram Story 2">
+        <img src="InternshipWork/PKudos3.png" alt="Pastry Appreciation Instagram Story 3">
+        <img src="InternshipWork/PKudos4.png" alt="Pastry Appreciation Instagram Story 4">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+
+   <!--Row 2-->
+  <div class="carousel-row">
+
+    <!-- Carousel 1 -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="InternshipWork/BR1.png" alt="Bully Ranch Appreciation Post">
+        <img src="InternshipWork/BR2.png" alt="Bully Ranch Appreciation Post">
+        <img src="InternshipWork/BR3.png" alt="Bully Ranch Appreciation Post">
+        <img src="InternshipWork/BR4.png" alt="Bully Ranch Appreciation Post">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <!-- Carousel 2 -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="InternshipWork/BTW1.png" alt="Poster Design 1">
+        <img src="InternshipWork/BTW2.png" alt="Poster Design 2">
+        <img src="InternshipWork/BTW3.png" alt="Poster Design 3">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <!-- Carousel 3 -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="InternshipWork/SpaApre1.png" alt="Spa Appreciation Instagram Story 1">
+        <img src="InternshipWork/SpaApre2.png" alt="Spa Appreciation Instagram Story 2">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+
+   <!-- Row 3 -->
+  <div class="carousel-row">
+
+    <!-- Carousel 1 -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <video width="300px" controls>
+          <source src="InternshipWork/Employee_Referral_Program.mp4" type="video/mp4">
+        </video>
+          <img src="InternshipWork/EE_ReferralFlyer.png" alt="Employee Referral Program Materials">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+
+  <!--PDF SECTION-->
+  <h3 style="margin-top: 60px; color: var(--navy);">Reports & Documents</h3>
+  <p>You can view some of my project documents below:</p>
+
+  <div class="pdf-gallery">
+    <div class="pdf-item">
+      <iframe src="InternshipWork/EE_Uniform.pdf" width="100%" height="500px"></iframe>
+      <p>Uniform Standard Guide (Expected DOC: November 2025)</p>
+    </div>
+    <div class="pdf-item">
+      <iframe src="InternshipWork/WelcomePacket.pdf" width="100%" height="500px"></iframe>
+      <p>Welcome Packet</p>
+    </div>
+    <div class="pdf-item">
+      <iframe src="InternshipWork/EESurvey.pdf" width="100%" height="500px"></iframe>
+      <p>Employee Engagement Survey (Information replaced and redacted with text placeholders)</p>
+    </div>
+    </div>
+
+</section>
+
+  <!--Modal Structure (Carousel)-->
+  <div id="photoModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="photoModalImg">
+    <div id="photoCaption"></div>
+    <a class="modal-prev">&#10094;</a>
+    <a class="modal-next">&#10095;</a>
+  </div>
+
+ <!-- MODAL STRUCTURE (Art)-->
+    <div id="artModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+      <div id="caption"></div>
+    </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 About Steph. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
