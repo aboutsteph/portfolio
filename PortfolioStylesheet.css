@@ -1,0 +1,419 @@
+/* COLORS */
+:root {
+  --bg:blanchedalmond;
+  --navy: #001f3f;
+  --pink: #ffd6e0;
+  --yellow: #fff8b5;
+  --sea: #b4f8c8;
+  --text: #333;
+}
+
+/* GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--sea);
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--navy);
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: var(--pink);
+}
+
+/* PARALLAX BASE CLASS */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* HERO SECTION */
+.hero {
+  background-image: url("Pictures/MountainBridge.jpg");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* align to right */
+  text-align: right;
+  padding: 0 5%;
+  color: var(--navy);
+}
+.hero-text {
+  max-width: 600px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  color: var(--navy);
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: var(--text);
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 120px 10%;
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--pink);
+}
+.about-text {
+  max-width: 600px;
+}
+.about-text h2 {
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+/* PORTFOLIO SECTION (SHORTER PARALLAX) */
+.portfolio {
+  background-image: url('Pictures/MountainScenery1.jpg');
+  height: 50vh;
+  position: relative;
+}
+.portfolio-overlay {
+  background: rgba(0, 31, 63, 0.45);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-overlay h2 {
+  color: var(--yellow);
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+/* MY WORK SECTION */
+.mywork {
+  padding: 100px 8%;
+  text-align: center;
+}
+.mywork h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--navy);
+}
+.work-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.work-item {
+  flex: 1 1 28%;
+  min-height: auto;
+  background-color: var(--pink);
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.work-item:hover {
+  background-color: var(--sea);
+  transform: translateY(-5px);
+}
+.work-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.work-item p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  color: var(--yellow);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* SUBPAGE STYLES */
+.sub-hero {
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.sub-hero .overlay {
+  background: rgba(0, 31, 63, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub-hero h1 {
+  color: var(--yellow);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+.page-content {
+  padding: 100px 10%;
+  text-align: center;
+}
+.page-content h2 {
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+.page-content p {
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.gallery img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 4px solid var(--sea);
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* MODAL POPUP */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  overflow: auto;
+  padding-top: 60px;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  font-style: italic;
+  max-width: 80%;
+}
+
+/* PDF SECTION */
+.pdf-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px; /* space between the PDFs */
+  flex-wrap: wrap; /* so it stacks on smaller screens */
+  margin-top: 40px;
+}
+
+.pdf-item {
+  flex: 1 1 45%; /* allows two items to share a row */
+  max-width: 45%;
+  background: white;
+  border: 3px solid var(--sea);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.pdf-item iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 6px;
+}
+
+.pdf-item p {
+  color: var(--navy);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Make PDFs stack on smaller screens */
+@media (max-width: 900px) {
+  .pdf-item {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--yellow);
+}
+
+/* ===== 3-COLUMN CAROUSEL LAYOUT ===== */
+.carousel-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* stack on small screens */
+  margin-top: 40px;
+}
+
+/* Each individual carousel */
+.carousel{
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden; /* hides other slides */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background: white;
+}
+
+/* Container for the slides */
+.carousel-images{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Each slide image */
+.carousel-images img {
+  flex: 0 0 100%; /* Each image takes up 100% of carousel width */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Arrows */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.prev { left: 8px; }
+.next { right: 8px; }
+
+.carousel button:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* Stack on smaller screens */
+@media (max-width: 950px) {
+  .carousel-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-pic {
+    margin-bottom: 20px;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .work-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .work-item {
+    width: 90%;
+  }
+
+}
